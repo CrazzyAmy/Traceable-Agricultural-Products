@@ -83,10 +83,10 @@ form{
 .banner{
     height: 435px;
     background-image: url("https://www.reference.com/wp-content/uploads/sites/2/2015/08/b353065a7d0160b14c00b57ed504118f.jpg");
-    background-position: center;
+    background-position:0% 100%;
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     color: #fff;
 }
 .login{
