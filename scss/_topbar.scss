@@ -1,0 +1,17 @@
+.logo-text{
+    color: black;
+    font-size: 32px;
+}
+
+
+.topbar{
+    height: 6vh;
+    background-color: $color-topbar;
+
+    button{
+        background-color: $color-grey-2;
+        color: black;
+        margin: 2px;
+    }
+
+}

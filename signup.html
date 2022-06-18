@@ -5,25 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="/css/style2_login.css">
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/modify.css">
-    <link rel="stylesheet" href="/css/style2_login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
 </head>
 <body>
     
-    <div class="header contain">
+    <div class=" contain" style="background-color: rgba(0, 0, 0, 0.9);position: relative;display: flex;justify-content: space-between;height: 50px;">
         <div class="logo">logo</div>
         <div class="login">
             <a>login</a>
         </div>
-        
     </div>  
     <div class="container-fluid main-container contain" style="display: flex; justify-content: center;  margin:0 auto;">
      
      <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
-        <h3>使用者登入</h3>
+        <h3>使用者註冊</h3>
         <form action="" id="loginForm">
           <div class="mb-3">
             
@@ -31,14 +29,18 @@
             <label class="form-label" for="users">帳號</label>
           </div>
           <div class="mb-3">
-            
-            <input class="form-control  input_text" type="password" name="passwords" id="passwords"  style="margin-top:15px;">
-            <label class="form-label" for="passwords">密碼</label>
+            <!-- method="post" action="option.php"  -->
+            <form class="form-control" id="userlist" style="margin-top:15px;">
+              <input type="radio" name="userid" value="1" checked>養殖戶
+              <input type="radio" name="userid" value="2">宰殺戶
+              <input type="radio" name="userid" value="3">加工戶
+            </form>
+            <label class="form-label" for="userlist">職業</label>
           </div>
           <div style="width: 100%; min-width: 380px; margin-left: auto;">
             <!-- onclick="document.getElementById('passwords').value = hex_sha256(document.getElementById('passwords').value)" -->
             <!-- <input class="btn btn-dark" type="button" id="register" onclick="location='/register.html'" value="註冊"> -->
-            <input class="btn btn-secondary" type="submit"   id="login" style="width: 100px; box-shadow: 2px 2px 2px gray;" value="登入">
+            <input class="btn btn-secondary" type="submit"   id="login" style="width: 100px; box-shadow: 2px 2px 2px gray;" value="註冊">
           </div> 
         </form>
      </div>

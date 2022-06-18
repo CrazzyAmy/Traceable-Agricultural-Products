@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <script type="module" src="./module/popper.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    
+</head>
+<body>
+    
+        <div class="header contain">
+            <div class="logo">logo</div>
+            <div class="login">
+                <a>login</a>
+            </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-3  mb-3">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne" onclick="location.href='/inputTAP_farm.html'" >
+                    inputTAP_farm
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" onclick="location.href='/inputTAP_house.html'" >
+                    inputTAP_house
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" onclick="location.href='/inputTAP_factory.html'" >
+                    inputTAP_factory
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle dropdown-a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+            
+              <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div> -->
+          </div>
+            <form class="col-6  mb-3">
+              <div class="row mb-3">
+                <label for="name" class="col-2 col-form-label">屠宰戶</label>
+                <div class="col-10 form-input mb-10">
+                  <input type="text" class="form-control" id="name">
+                </div>
+              </div>
+              <div class="row mb-3">
+                  <label for="name" class="col-sm-2  col-form-label">體重</label>
+                  <div class="col-sm-4 form-input mb-10" style="margin-right: 10px;">
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <label for="name" class="col-sm-2  col-form-label">原產地</label>
+                  <div class="col-sm-4 form-input mb-10" style="margin-right: 10px;">
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <!-- <label for="birthday" class="col-sm-2 col-form-label">出生日期</label>
+                  <div class="col-sm-3 form-input mb-10">
+                    <input type="text" class="form-control" id="birthday" placeholder="yyyy">-
+                    <input type="text" class="form-control" id="birthday" placeholder="mm">-
+                    <input type="text" class="form-control" id="birthday" placeholder="dd">
+                  </div> -->
+              </div>
+              
+              <!-- <div class="row mb-3">
+                  <label for="name" class="col-sm-2 col-form-label">健康資訊</label>
+                  <div class="col-sm-3 form-input mb-10" style="margin-right: 10px;">
+                    <input type="text" class="form-control" id="name">
+                  </div>
+                  <label for="name" class="col-sm-2 col-form-label">食用飼料</label>
+                  <div class="col-sm-3 form-input mb-10">
+                    <input type="text" class="form-control" id="name">
+                  </div>
+              </div> -->
+              
+              <div class="row mb-3">
+                <label for="name" class="col-sm-2 col-form-label">部位</label>
+                <select name="buildingName" id="selectBuilding" class="col-sm-10 form-input mb-10">
+                  <option value="ALL">ALL</option>
+                  <option disabled>---------</option>
+                  <option value="Jowl">豬頰肉</option>
+                  <option value="Neck">豬頸肉</option>
+                  <option value="Butt">梅花肉</option>
+                  <option value="Loin">里肌肉</option>
+                  <option value="Belly">五花肉</option>
+                  <option value="Hock">前腿肉</option>
+                  <option value="Leg">後腿肉</option>
+                </select>
+                <!-- 豬頰肉, 豬頸肉, 梅花肉, 里肌肉, 五花肉, 前腿肉, 後腿肉 -->
+                <!-- <div class="col-sm-10 form-input mb-10">
+                  <input type="text" class="form-control" id="name">
+                </div> -->
+            </div>
+          <div class="row mb-3">
+              <label for="name" class="col-sm-2 col-form-label">屠宰日期</label>
+              <div class="col-sm-3 form-input mb-10" style="margin-right: 10px;">
+                <input type="text" class="form-control" id="name">
+              </div>
+              <label for="name" class="col-sm-2 col-form-label">屠宰時間</label>
+              <div class="col-sm-3 form-input mb-10">
+                <input type="text" class="form-control" id="name">
+              </div>
+          </div>
+      </form>
+      <div class="col-3"></div>
+    </div>   
+        
+</body>
+<script>
+  $('.dropdown-a').click(function(e) {
+    e.preventDefault();
+    $('.dropdown').toggleClass('active')
+  })
+</script>
+</html>
