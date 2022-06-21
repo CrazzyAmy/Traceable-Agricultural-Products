@@ -109,6 +109,27 @@ table {
     background-color: gray;
     color: #fff;
 }
+.loginbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 30px;
+    width: 200px;
+    border-radius: 20%;
+}
+.loginbtn a{
+    text-decoration: none;
+}
+.loginbtn:hover{
+    text-decoration: none;
+    background-color: gray;
+    
+}
+.loginbtn:hover a{
+    text-decoration: none;
+    color: #fff;
+}
 .signup{
     display: flex;
     justify-content: center;

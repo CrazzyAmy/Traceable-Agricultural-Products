@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style_index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- <link rel="stylesheet" href="/css/style2_login.css"> -->
     <link rel="stylesheet" href="/css/all.css">
@@ -73,8 +78,8 @@
         <div class="row contain" style="padding-top: 30px;overflow-y: auto;">
             <div class="col-2"></div>
             <div class="col-4" style="padding: 20px;">
-                <h1>如果你是消費者...</h1>
-                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;">
+                <h1 style="margin: 30px 0;">如果你是消費者...</h1>
+                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto; margin-top: 75px;">
                     <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
                         <form id="Search"  method="post" action="{{ url_for('search') }}">
                             <!-- <div class="input-group" style="padding: 20px;"> -->
@@ -82,7 +87,7 @@
                                 <input type="text" id="tap" class="form-control input_text" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <label for="tap" class="form-label" style="padding: 0 20px;">豬肉履歷代碼:</label>
                                 <div class="input-group-append" style="width: 100%; min-width: 380px; margin-left: auto;">
-                                    <button class="btn btn-outline-secondary" type="submit" id="search" style="width: 100px; box-shadow: 2px 2px 2px gray;" onclick="location.href='/haveTAP_factory.html'">Search</button>
+                                    <button class="btn btn-outline-secondary" type="submit" id="search" style="width: 100px; box-shadow: 2px 2px 2px gray;">Search</button>
                                 </div>
                             <!-- </div> -->
                         </form>
@@ -102,23 +107,18 @@
                            <input class="form-control input_text" type="text" name="users" id="users"  style="margin-top: 45px;">
                            <label class="form-label" for="users">帳號</label>
                          </div>
-                         <div class="mb-3">
+                         <div>
                             
-                           <!-- method="post" action="option.php"  -->
-                           <form class="form-control" id="usertype" style="margin-top:15px;">
-                             <input type="radio" name="userid" value="1" checked>養殖戶
-                             <input type="radio" name="userid" value="2">宰殺戶
-                             <input type="radio" name="userid" value="3">加工戶
-                           </form>
-                           <label class="form-label" for="userlist">職業</label>
+                             <input type="radio" name="userid" value="factory" checked>養殖戶
+                             <input type="radio" name="userid" value="house">宰殺戶
+                             <input type="radio" name="userid" value="farm">加工戶
+                             <label class="form-label" for="userlist">職業</label>
                          </div>
-                         <div class="login">
-                            <a href="/login.html">已註冊前往登入</a>
+                         <div class="loginbtn mb-3" style="">
+                            <a href="/login.html" >已註冊前往登入</a>
                          </div>
                          <div style="width: 100%; min-width: 380px; margin-left: auto;">
-                           <!-- onclick="document.getElementById('passwords').value = hex_sha256(document.getElementById('passwords').value)" -->
-                           <!-- <input class="btn btn-dark" type="button" id="register" onclick="location='/register.html'" value="註冊"> -->
-                           <button class="btn btn-secondary" type="submit"   id="signup" style="width: 100px; box-shadow: 2px 2px 2px gray;">註冊
+                           <button class="btn btn-secondary" type="submit"   id="signup" style="width: 100px; box-shadow: 2px 2px 2px gray;" >註冊</button>
                          </div> 
                        </form>
                     </div>
@@ -133,6 +133,10 @@
         e.preventDefault();
         $('.dropdown').toggleClass('active')
     })
+    var el = document.getElementById('userlist');
+    if(el){
+        el.addEventListener('click', swapper, false);
+    }
     document.getElementById('userlist').addEventListener('submit', function(e) {
         // prevent default browser behavior
         console.log("click")

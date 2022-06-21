@@ -110,19 +110,14 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="dropdown">
-              <a class="btn btn-secondary dropdown-toggle dropdown-a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
-              </a>
-            
-              <ul class="dropdown dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </div> -->
           </div>
             <form class="col-6  mb-3">
+              <div class="row mb-3">
+                <label for="pigid" class="col-2 col-form-label">Pig_id</label>
+                <div class="col-10 form-input mb-10">
+                  <input type="text" class="form-control" id="pigid" name="pigid">
+                </div>
+              </div>
               <div class="row mb-3">
                 <label for="name" class="col-2 col-form-label">Pork_id</label>
                 <div class="col-10 form-input mb-10">
@@ -138,24 +133,7 @@
                   <div class="col-sm-4 form-input mb-10" style="margin-right: 10px;">
                     <input type="text" class="form-control" id="name">
                   </div>
-                  <!-- <label for="birthday" class="col-sm-2 col-form-label">出生日期</label>
-                  <div class="col-sm-3 form-input mb-10">
-                    <input type="text" class="form-control" id="birthday" placeholder="yyyy">-
-                    <input type="text" class="form-control" id="birthday" placeholder="mm">-
-                    <input type="text" class="form-control" id="birthday" placeholder="dd">
-                  </div> -->
               </div>
-              
-              <!-- <div class="row mb-3">
-                  <label for="name" class="col-sm-2 col-form-label">健康資訊</label>
-                  <div class="col-sm-3 form-input mb-10" style="margin-right: 10px;">
-                    <input type="text" class="form-control" id="name">
-                  </div>
-                  <label for="name" class="col-sm-2 col-form-label">食用飼料</label>
-                  <div class="col-sm-3 form-input mb-10">
-                    <input type="text" class="form-control" id="name">
-                  </div>
-              </div> -->
               
               <div class="row mb-3">
                 <label for="name" class="col-sm-2 col-form-label">部位</label>
@@ -170,21 +148,22 @@
                   <option value="Hock">前腿肉</option>
                   <option value="Leg">後腿肉</option>
                 </select>
-                <!-- 豬頰肉, 豬頸肉, 梅花肉, 里肌肉, 五花肉, 前腿肉, 後腿肉 -->
-                <!-- <div class="col-sm-10 form-input mb-10">
-                  <input type="text" class="form-control" id="name">
-                </div> -->
             </div>
-          <div class="row mb-3">
-              <label for="name" class="col-sm-2 col-form-label">屠宰日期</label>
-              <div class="col-sm-3 form-input mb-10" style="margin-right: 10px;">
-                <input type="text" class="form-control" id="name" placeholder="yyyy/mm/dd">
-              </div>
-              <label for="name" class="col-sm-2 col-form-label">屠宰時間</label>
-              <div class="col-sm-3 form-input mb-10">
-                <input type="text" class="form-control" id="name" placeholder="00-00-00">
-              </div>
+            <div class="row mb-3">
+              <label for="killday" class="col-sm-2 col-form-label">屠宰日期</label>
+                <div class="col-sm-3"><input type="text" class="form-control col-sm-2 form-input" id="killday" name="killdayy" placeholder="yyyy" style="display: inline;"></div>
+                <div class="col-sm-3"><input type="text" class="form-control col-sm-2 form-input" id="killday" name="killdaym" placeholder="mm" style="display: inline;"></div>
+                <div class="col-sm-3"><input type="text" class="form-control col-sm-2 form-input" id="killday" name="killdayd" placeholder="dd" style="display: inline;"></div>
           </div>
+          <div class="row mb-3">
+              <label for="killtime" class="col-sm-2 col-form-label">屠宰時間</label>
+              <div class="col-sm-3"><input type="text" class="form-control col-sm-3 form-input mb-10" id="killtime" name="killtimeh" placeholder="hh" style="display: inline;"></div>
+              <div class="col-sm-3"><input type="text" class="form-control col-sm-3 form-input mb-10" id="killtime" name="killtimem" placeholder="mm" style="display: inline;"></div>
+              <div class="col-sm-3"><input type="text" class="form-control col-sm-3 form-input mb-10" id="killtime" name="killtimes" placeholder="ss" style="display: inline;"></div>
+          </div>
+          <div style="width: 100%; min-width: 380px; margin-left: auto;">
+            <button class="btn btn-secondary" type="submit"   id="signup" style="width: 100px; box-shadow: 2px 2px 2px gray;" onclick="location.href='/searchTAP_factory.html'" >送出
+          </div> 
       </form>
       <div class="col-3"></div>
     </div>   

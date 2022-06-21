@@ -116,7 +116,12 @@
             </div> -->
           </div>
             <form class="col-6  mb-3" method="post" action="{{ url_for('input_factory') }}">
-            <h1 class="mb-30">代號<div class="" style="display: block;"><input type="text" class="form-control" id="name"></div>之履歷</h1>
+              <div class="row mb-3">
+                <label for="name" class="col-2 col-form-label">Pork_id</label>
+                <div class="col-10 form-input mb-10">
+                  <input type="text" class="form-control" id="name">
+                </div>
+              </div>
             <div class="row mb-3">
               <label for="prodid" class="col-2 col-form-label">Prod_id</label>
               <div class="col-10 form-input mb-10">
@@ -152,14 +157,19 @@
           </div>
             <div class="row mb-3">
                 <label for="prodday" class="col-sm-2 col-form-label">加工日期</label>
-                <div class="col-sm-3 form-input mb-10" style="margin-right: 10px;">
-                  <input type="text" class="form-control" id="prodday" name="prodday" placeholder="yyyy/mm/dd">
-                </div>
-                <label for="prodtime" class="col-sm-2 col-form-label">加工時間</label>
-                <div class="col-sm-3 form-input mb-10">
-                  <input type="text" class="form-control" id="prodtime" name="prodtime" placeholder="00-00-00">
-                </div>
+                  <div class="col-sm-3"><input type="text" class="form-control col-sm-2 form-input" id="prodday" name="proddayy" placeholder="yyyy" style="display: inline;"></div>
+                  <div class="col-sm-3"><input type="text" class="form-control col-sm-2 form-input" id="prodday" name="proddaym" placeholder="mm" style="display: inline;"></div>
+                  <div class="col-sm-3"><input type="text" class="form-control col-sm-2 form-input" id="prodday" name="proddayd" placeholder="dd" style="display: inline;"></div>
             </div>
+            <div class="row mb-3">
+                <label for="prodtime" class="col-sm-2 col-form-label">加工時間</label>
+                <div class="col-sm-3"><input type="text" class="form-control col-sm-3 form-input mb-10" id="prodtime" name="prodtimeh" placeholder="hh" style="display: inline;"></div>
+                <div class="col-sm-3"><input type="text" class="form-control col-sm-3 form-input mb-10" id="prodtime" name="prodtimem" placeholder="mm" style="display: inline;"></div>
+                <div class="col-sm-3"><input type="text" class="form-control col-sm-3 form-input mb-10" id="prodtime" name="prodtimes" placeholder="ss" style="display: inline;"></div>
+            </div>
+            <div style="width: 100%; min-width: 380px; margin-left: auto;">
+              <button class="btn btn-secondary" type="submit"   id="signup" style="width: 100px; box-shadow: 2px 2px 2px gray;"  onclick="location.href='/searchTAP_factory.html'">送出
+            </div> 
         </form>
       <div class="col-3"></div>
     </div>   
