@@ -5,18 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style_index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
+
+    <!-- <link rel="stylesheet" href="/css/style2_login.css"> -->
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/modify.css">
 </head>
+<style>
+  .ham-icon {
+    position: absolute;
+    right: 80px;
+    color: #000;
+  }
+  
+ .dropdown{
+   position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    max-height: 0px;
+    transition: all 0.8s;
+    overflow: hidden;
+    z-index: 120;
+ }
+  .dropdown.active {
+    max-height: 350px;
+  }
+
+</style>
 <body>
-    
-        <div class="header contain">
+    <div class="" style="overflow-y: auto;">
+        <div class="header">
             <div class="logo">logo</div>
-            <div class="login">
-                <a>login</a>
-            </div>
-            
+            <!-- <div class="signup">
+                <a src="/signup.html">Sign up</a>
+            </div> -->
+            <a href="#" class="ham-icon">
+                <i class="fas fa-bars "></i>
+            </a>
+            <ul class="dropdown">
+                <div>
+                    <a href="/inputTAP_farm.html">登記履歷_養豬者</a>
+                </div>
+                <div>
+                    <a href="/inputTAP_house.html">登記履歷_屠宰者</a>
+                </div>
+                <div>
+                    <a href="/inputTAP_factory.html">登記履歷_加工者</a>
+                </div>
+            </ul>
         </div>
         <div class="banner">
             <div class="box">
@@ -29,20 +70,87 @@
             </div>
             
         </div>    
-        <div class="content contain" style="padding-top: 30px;">
-            
-            <div class="input-group" style="padding: 20px;">
-                <label for="" class="" style="padding: 0 20px;">豬肉履歷代碼:</label>
-                <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button">Search</button>
+        <div class="row contain" style="padding-top: 30px;overflow-y: auto;">
+            <div class="col-2"></div>
+            <div class="col-4" style="padding: 20px;">
+                <h1>如果你是消費者...</h1>
+                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;">
+                    <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
+                        <form id="Search"  method="post" action="{{ url_for('search') }}">
+                            <!-- <div class="input-group" style="padding: 20px;"> -->
+                                
+                                <input type="text" id="tap" class="form-control input_text" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <label for="tap" class="form-label" style="padding: 0 20px;">豬肉履歷代碼:</label>
+                                <div class="input-group-append" style="width: 100%; min-width: 380px; margin-left: auto;">
+                                    <button class="btn btn-outline-secondary" type="submit" id="search" style="width: 100px; box-shadow: 2px 2px 2px gray;" onclick="location.href='/haveTAP_factory.html'">Search</button>
+                                </div>
+                            <!-- </div> -->
+                        </form>
+                    </div>
                 </div>
             </div>
-            <h1>已有履歷代碼</h1>
-            <table>
-
-            </table>
+            <div class="col-4" style="padding: 20px;">
+                <h1>如果你是養殖戶、屠宰戶、加工戶...</h1>
+                <h2>註冊了嗎?</h2>
+                <div class="container-fluid main-container contain" style="display: flex; justify-content: center;  margin:0 auto;">
+     
+                    <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
+                       <h3>使用者註冊</h3>
+                       <form id="loginForm"  method="post" action="{{ url_for('signup') }}">
+                         <div class="mb-3">
+                           
+                           <input class="form-control input_text" type="text" name="users" id="users"  style="margin-top: 45px;">
+                           <label class="form-label" for="users">帳號</label>
+                         </div>
+                         <div class="mb-3">
+                            
+                           <!-- method="post" action="option.php"  -->
+                           <form class="form-control" id="usertype" style="margin-top:15px;">
+                             <input type="radio" name="userid" value="1" checked>養殖戶
+                             <input type="radio" name="userid" value="2">宰殺戶
+                             <input type="radio" name="userid" value="3">加工戶
+                           </form>
+                           <label class="form-label" for="userlist">職業</label>
+                         </div>
+                         <div class="login">
+                            <a href="/login.html">已註冊前往登入</a>
+                         </div>
+                         <div style="width: 100%; min-width: 380px; margin-left: auto;">
+                           <!-- onclick="document.getElementById('passwords').value = hex_sha256(document.getElementById('passwords').value)" -->
+                           <!-- <input class="btn btn-dark" type="button" id="register" onclick="location='/register.html'" value="註冊"> -->
+                           <button class="btn btn-secondary" type="submit"   id="signup" style="width: 100px; box-shadow: 2px 2px 2px gray;">註冊
+                         </div> 
+                       </form>
+                    </div>
+                 </div>
+            </div>
+            <div class="col-2"></div>
         </div>
-    
+    </div>
 </body>
+<script type="module">
+    $('.ham-icon').click(function(e) {
+        e.preventDefault();
+        $('.dropdown').toggleClass('active')
+    })
+    document.getElementById('userlist').addEventListener('submit', function(e) {
+        // prevent default browser behavior
+        console.log("click")
+        e.preventDefault();
+
+          var username = document.getElementById('users').value;
+          var usertype = document.getElementById('usertype').value;
+          // execute the 'login' function with the username and password filled in on the client
+          var user = logIn(username, usertype);
+        // }
+    });
+    function logIn(username, passw){  
+        console.log("cookie");
+        document.cookie = 'username='+ document.getElementById('users').value;
+        document.cookie = 'usertype='+ document.getElementById('usertype').value;
+        console.log(document.cookie)
+        console.log(document.getElementById('users').value)
+        
+      }
+</script>
 </html>

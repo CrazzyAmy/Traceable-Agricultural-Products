@@ -14,15 +14,15 @@
     
     <div class=" contain" style="background-color: rgba(0, 0, 0, 0.9);position: relative;display: flex;justify-content: space-between;height: 50px;">
         <div class="logo">logo</div>
-        <div class="login">
-            <a>login</a>
+        <div class="signup">
+            <a src="/signup.html">SignUp</a>
         </div>
     </div>  
     <div class="container-fluid main-container contain" style="display: flex; justify-content: center;  margin:0 auto;">
      
      <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
         <h3>使用者註冊</h3>
-        <form action="" id="loginForm">
+        <form id="loginForm"  method="post" action="{{ url_for('signup') }}">
           <div class="mb-3">
             
             <input class="form-control input_text" type="text" name="users" id="users"  style="margin-top: 45px;">
@@ -40,7 +40,7 @@
           <div style="width: 100%; min-width: 380px; margin-left: auto;">
             <!-- onclick="document.getElementById('passwords').value = hex_sha256(document.getElementById('passwords').value)" -->
             <!-- <input class="btn btn-dark" type="button" id="register" onclick="location='/register.html'" value="註冊"> -->
-            <input class="btn btn-secondary" type="submit"   id="login" style="width: 100px; box-shadow: 2px 2px 2px gray;" value="註冊">
+            <button class="btn btn-secondary" type="submit"   id="signup" style="width: 100px; box-shadow: 2px 2px 2px gray;">註冊
           </div> 
         </form>
      </div>
