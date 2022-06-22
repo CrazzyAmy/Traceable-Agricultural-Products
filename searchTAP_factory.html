@@ -12,29 +12,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js">
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/modify.css">
+    
 </head>
 <body>
-    
-        <div class="header contain">
-          <div class="logo">
-            <img src="/pighead.png" style="height: 9vh;" alt="" >
-            <img src="/pigtitle.png" style="height: 5vh;" alt="" >
-        </div>
-        <!-- <div class="signup">
-            <a src="/signup.html">Sign up</a>
-        </div> -->
-        <div style="display: flex; align-items:center; justify-content:center">
-            <a href="#" class="ham-icon">
-                <i class="fas fa-bars "></i>
-            </a>
-        </div>
-          <div class="login">
-              <a href="/signup.html">login</a>
-          </div>
-          <div class="signup">
-            <a href="/signup.html">Sign up</a>
-          </div>
-        </div>  
+    <!--style="max-width: 1140px;margin: 0 auto;position: relative;display: flex;font: normal normal normal 16px/28px Noto Sans;justify-content: space-between;height: 55px;"  -->
+  <div class="header contain" >
+    <div class="logo">
+      <img src="/pighead.png" style="height: 9vh;" alt="" >
+      <img src="/pigtitle.png" style="height: 5vh;" alt="" >
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="login" style="display: inline;">
+          <a href="/login.html">login</a>
+      </div>
+      <div class="signup" style="display: inline;">
+        <a href="/signup.html">Sign up</a>
+      </div>
+    </div>
+  </div>  
         <div class="row">
           <div class="col-3  mb-3">
             <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -126,7 +121,7 @@
           </div>
           <div class="col-6 container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;">
             <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
-                <form id="Searchprod"  method="post" action="{{ url_for('searchprod') }}">
+                <form id="Searchprod"  method="post" action="{{ url_for('searchprod') }}"  >
                         <input type="text" id="tap" class="form-control input_text" name="tap" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
                         <label for="tap" class="form-label" style="padding: 0 20px;">產品履歷代碼:</label>
                         <div class="input-group-append" style="width: 100%; min-width: 380px; margin-left: auto;">
@@ -135,7 +130,7 @@
                 </form>
             </div>
           </div>
-
+<!---->
       <div class="col-3"></div>
     </div> 
 </body>
