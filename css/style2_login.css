@@ -70,10 +70,13 @@ table {
 	flex-wrap: wrap;
 }
 .header{
+    max-width: 1140px;
     position: relative;
     display: flex;
+    margin: 0 auto;
+    font: normal normal normal 16px/28px Noto Sans;
     justify-content: space-between;
-	height: 50px;
+	height: 55px;
 }
 
 .banner{

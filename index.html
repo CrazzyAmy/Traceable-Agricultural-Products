@@ -45,13 +45,19 @@
 <body>
     <div class="" style="overflow-y: auto;">
         <div class="header">
-            <div class="logo">logo</div>
+            <div class="logo">
+                <img src="/pighead.png" style="height: 9vh;" alt="" >
+                <img src="/pigtitle.png" style="height: 5vh;" alt="" >
+            </div>
             <!-- <div class="signup">
                 <a src="/signup.html">Sign up</a>
             </div> -->
-            <a href="#" class="ham-icon">
-                <i class="fas fa-bars "></i>
-            </a>
+            <div style="display: flex; align-items:center; justify-content:center">
+                <a href="#" class="ham-icon">
+                    <i class="fas fa-bars "></i>
+                </a>
+            </div>
+            
             <ul class="dropdown">
                 <div>
                     <a href="/inputTAP_farm.html">登記履歷_養豬者</a>
@@ -79,7 +85,7 @@
             <div class="col-2"></div>
             <div class="col-4" style="padding: 20px;">
                 <h1 style="margin: 30px 0;">如果你是消費者...</h1>
-                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto; margin-top: 75px;">
+                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;">
                     <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
                         <form id="Search"  method="post" action="{{ url_for('search') }}">
                             <!-- <div class="input-group" style="padding: 20px;"> -->
@@ -96,7 +102,7 @@
             </div>
             <div class="col-4" style="padding: 20px;">
                 <h1>如果你是養殖戶、屠宰戶、加工戶...</h1>
-                <h2>註冊了嗎?</h2>
+                <!-- <h2>註冊了嗎?</h2> -->
                 <div class="container-fluid main-container contain" style="display: flex; justify-content: center;  margin:0 auto;">
      
                     <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
