@@ -85,13 +85,13 @@
             <div class="col-2"></div>
             <div class="col-4" style="padding: 20px;">
                 <h1 style="margin: 30px 0;">如果你是消費者...</h1>
-                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;">
-                    <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
+                <div class="container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;align-items: center;">
+                    <div class="rounded border " style="margin-top: 30px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; ">
                         <form id="Search"  method="post" action="{{ url_for('search') }}">
                             <!-- <div class="input-group" style="padding: 20px;"> -->
                                 
                                 <input type="text" id="tap" class="form-control input_text" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <label for="tap" class="form-label" style="padding: 0 20px;">產品履歷編號:</label>
+                                <label for="tap" class="form-label" style="padding: 0 20px;">產品ID:</label>
                                 <div class="input-group-append" style="width: 100%; min-width: 380px; margin-left: auto;">
                                     <button class="btn btn-outline-secondary" type="submit" id="search" style="width: 100px; box-shadow: 2px 2px 2px gray;">查詢履歷</button>
                                 </div>
@@ -103,9 +103,9 @@
             <div class="col-4" style="padding: 20px;">
                 <h1>如果你是養殖戶、屠宰戶、加工戶...</h1>
                 <!-- <h2>註冊了嗎?</h2> -->
-                <div class="container-fluid main-container contain" style="display: flex; justify-content: center;  margin:0 auto;">
+                <div class="container-fluid main-container contain" style="display: flex; justify-content: center;  margin:0 auto;align-items: center;">
      
-                    <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
+                    <div class="rounded border " style="margin-top: 30px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; ">
                        <h3>使用者註冊</h3>
                        <form id="loginForm"  method="post" action="{{ url_for('signup') }}">
                          <div class="mb-3">
