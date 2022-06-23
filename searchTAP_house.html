@@ -89,7 +89,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingBall">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseBall" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne" onclick="location.href='/searchTAP_factory.html'" >
-                    搜尋產品履歷
+                    查詢產品履歷
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseBall" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingBall">
@@ -101,7 +101,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingBall">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseBall" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne" onclick="location.href='/searchTAP_house.html'" >
-                    搜尋屠宰履歷
+                    查詢豬肉履歷
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseBall" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingBall">
@@ -113,7 +113,7 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingBall">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseBall" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne" onclick="location.href='/searchTAP_farm.html'" >
-                    搜尋養殖履歷
+                    查詢豬隻履歷
                   </button>
                 </h2>
                 <div id="panelsStayOpen-collapseBall" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingBall">
@@ -127,9 +127,9 @@
           </div>
           <div class="col-6 container-fluid main-container" style="display: flex; justify-content: center;  margin:0 auto;">
             <div class="rounded border " style="margin-top: 60px; display: block; background-color:white; flex-wrap: nowrap; height: 495px; max-width: 380px; padding:80px; padding-top: 125px; margin-right:20px; ">
-                <form id="Searchhouse"  method="post" action="{{ url_for('searchhouse') }}">
-                        <input type="text" id="tap" class="form-control input_text" name="tap" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <label for="tap" class="form-label" style="padding: 0 20px;">屠宰履歷代碼:</label>
+                <form id="Searchhouse"  method="post" action="/haveTAP_house.html">
+                        <input type="text" id="tap" class="form-control input_text" name="porkid" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <label for="tap" class="form-label" style="padding: 0 20px;">豬肉履歷編號:</label>
                         <div class="input-group-append" style="width: 100%; min-width: 380px; margin-left: auto;">
                             <button class="btn btn-outline-secondary" type="submit" id="tapsearch" style="width: 100px; box-shadow: 2px 2px 2px gray;" onclick="location.href='/haveTAP_factory.html'">Search</button>
                         </div>
